@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>
+            CRSP Soundboard
+        </title>   
+        <script type="text/javascript" src ="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+
+        <link id="red" href="CSS/stylesheet-jungle.css" type="text/css" rel="stylesheet">
+        
+        
+        <meta charset="utf-8"/> 
+          
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style>
+            #soundBoard{
+                visibility: visible
+            }
+            #soundBoardCompact{
+                display: none;
+            }
+            #soundBoard2{
+                display: none;
+            }
+            #soundBoardCompact2{
+                display: none;
+            }
+            #soundBoardContainer{ 
+                display:flex;
+                flex-direction: column-reverse;
+            }
+            
+        </style>
+	</head>
+	<body>
+        <p id="title"> 
+            
+        </p>
+        <select id="view" onchange="changeView()">
+            <option value="full">Full</option>
+            <option value="compact">Compact</option>
+        </select>
+        <select id="soundBoardChanger" onchange="changeSoundBoard()">
+            <option value="jungle">Jungle</option>
+            <option value="ocean">Ocean</option>
+        </select>
+        <select id="theme" onchange="changeTheme()">
+            <option value="default">Default</option>
+            <option value="purple">Purple</option>
+        </select>
+        <br>
+        <div id="soundBoardContainer">
+            <div id="soundBoard"></div>
+            <div id="soundBoardCompact"></div>
+            <div id="soundBoard2"></div>
+            <div id="soundBoardCompact2"></div>
+        </div>
+        <br>
+        <footer>
+             A Product of CRSP Industries &copy; 2017
+        </footer>
+        <script>
+            var config;
+            $(window).load(function() { 
+                $.ajax({url:"https://website-8bbe4.firebaseapp.com/json/packet.txt", success: function(data){
+                    config = JSON.parse(data);
+                    var stringHTML = "";
+                    for(var i=0; i<12;i++) {
+                        stringHTML += "<div class='item'>" + config.soundBoard1.name[i] + "<br><img src='" + config.soundBoard1.imgURL[i] + "' alt='Mountain View' width='100' height='100'><audio ><source src='" + config.soundBoard1.sndURL[i] + "' type='audio/wav'></audio></div>";
+                    }
+                    $("#soundBoard").html(stringHTML);
+                    stringHTML = "";
+                    for(var i=0; i<12; i++) {
+                        stringHTML += "<div class='item'>" + config.soundBoard1.name[i] + "<br><audio controls><source src='" + config.soundBoard1.sndURL[i] + "' type='audio/wav'></audio></div>";
+                    }
+                    $("#soundBoardCompact").html(stringHTML);
+                    
+                    stringHTML = "";
+              /*      
+                    for(var i=0; i<12; i++) {
+                        stringHTML += "<div class='item'>" + config.soundBoard2.name[j] + "<br><img src='" + config.soundBoard2.imgURL[j] + "' alt='Mountain View' width='100' height='100'><audio ><source src='" + config.soundBoard2.sndURL[j] + "' type='audio/wav'></audio></div>";
+                    }*/
+
+                    for(var i=0; i<12;i++) {
+                        stringHTML += "<div class='item'>" + config.soundBoard2.name[i] + "<br><img src='" + config.soundBoard2.imgURL[i] + "' alt='Mountain View' width='100' height='100'><audio ><source src='" + config.soundBoard2.sndURL[i] + "' type='audio/wav'></audio></div>";
+                    }
+                    $("#soundBoard2").html(stringHTML);
+                    
+                    stringHTML = "";
+                    for(var i=0; i<12; i++) {
+                        stringHTML += "<div class='item'>" + config.soundBoard2.name[i] + "<br><audio controls><source src='" + config.soundBoard2.sndURL[i] + "' type='audio/wav'></audio></div>";
+                    }
+                    
+                    $("#soundBoardCompact2").html(stringHTML);
+                    
+                    $(".item").click(function() {
+                        var sound = $(this).find('audio').get(0);
+                        if(sound.paused) {
+                            sound.play();
+                        } else {
+                            sound.pause();
+                        }
+                    });}})});
+            
+            function changeView(){
+                document.getElementById('soundBoardContainer').firstElementChild.style.display = "none";
+                if(document.getElementById('view').value == 'full'){
+                    if(document.getElementById('soundBoardChanger').value == 'jungle'){
+                        document.getElementById('soundBoardContainer').insertBefore(document.getElementById('soundBoard'), document.getElementById('soundBoardContainer').firstChild);
+document.getElementById('soundBoardContainer').firstElementChild.style.display = "flex";
+                        document.getElementById('red').setAttribute("href","CSS/stylesheet-jungle.css");
+                    }
+                    else{
+                        document.getElementById('soundBoardContainer').insertBefore(document.getElementById('soundBoard2'), document.getElementById('soundBoardContainer').firstChild);
+document.getElementById('soundBoardContainer').firstElementChild.style.display = "flex";
+                        document.getElementById('red').setAttribute("href","CSS/stylesheet-ocean.css");
+                    }
+//                    document.getElementById('soundBoard').style.visibility = "visible";
+        //            document.getElementById('soundBoardCompact').style.visibility = "hidden";
+                   // document.getElementById('soundBoardContainer').insertBefore(document.getElementById('soundBoardCompact'), document.getElementById('soundBoard'));
+                    
+
+                }
+                else{
+                    if(document.getElementById('soundBoardChanger').value == 'jungle'){
+                        document.getElementById('soundBoardContainer').insertBefore(document.getElementById('soundBoardCompact'), document.getElementById('soundBoardContainer').firstChild);
+                    }
+                    else{
+                        document.getElementById('soundBoardContainer').insertBefore(document.getElementById('soundBoardCompact2'), document.getElementById('soundBoardContainer').firstChild);
+                    }
+                    document.getElementById('soundBoardContainer').firstElementChild.style.display = "inline";
+               //     document.getElementById('soundBoard').style.visibility = "hidden";
+           //         document.getElementById('soundBoardCompact').style.visibility = "visible";
+                    document.getElementById('red').setAttribute("href","stylesheet-compact.css");
+                    //document.getElementById('soundBoardContainer').insertBefore( document.getElementById('soundBoard'),document.getElementById('soundBoardCompact'));
+                }
+                
+            }
+            
+            function changeTheme(){
+                if(document.getElementById('theme').value == 'default'){
+                        var bod = document.getElementsByTagName("body")[0];
+                        bod.style.backgroundColor = "darkolivegreen";
+                   
+                    }
+                    else{
+                        var bod = document.getElementsByTagName("body")[0];
+                        bod.style.backgroundColor = "red";
+                    }
+                
+            }
+            
+            
+            function changeSoundBoard(){
+                document.getElementById('soundBoardContainer').firstElementChild.style.display = "none";
+                if(document.getElementById('soundBoardChanger').value == 'jungle'){
+                   document.getElementById("title").textContent = config.soundBoard1.title;
+                    
+                    if(document.getElementById('view').value == 'full'){
+                    //    document.getElementById('soundBoard').style.visibility = "visible";
+                  //      document.getElementById('soundBoardCompact').style.display = "none";
+                        document.getElementById('soundBoardContainer').insertBefore(document.getElementById('soundBoard'), document.getElementById('soundBoardContainer').firstChild);
+
+                //        document.getElementById('soundBoard2').style.display = "none";
+              //          document.getElementById('soundBoardCompact2').style.display = "none";
+                        document.getElementById('soundBoardContainer').firstElementChild.style.display = "flex";
+                        document.getElementById('red').setAttribute("href","CSS/stylesheet-jungle.css");
+                    }
+                    else{
+                  //      document.getElementById('soundBoard').style.display = "none";
+                    //    document.getElementById('soundBoardCompact').style.visibility = "visible";
+                      //  document.getElementById('soundBoard2').style.display = "none";
+                        //document.getElementById('soundBoardCompact2').style.display = "none";
+                        
+                        document.getElementById('soundBoardContainer').insertBefore(document.getElementById('soundBoardCompact'), document.getElementById('soundBoardContainer').firstChild);
+document.getElementById('soundBoardContainer').firstElementChild.style.display = "inline";
+                        document.getElementById('red').setAttribute("href","stylesheet-compact.css");
+                    }
+                     
+                       // config = outerConfig.soundBoard1;
+                }
+                else{
+                   document.getElementById("title").textContent = config.soundBoard2.title;
+                    //config = outerConfig.soundBoard2;
+                    if(document.getElementById('view').value == 'full'){
+    //                    document.getElementById('soundBoard2').style.visibility = "visible";
+      //                  document.getElementById('soundBoardCompact').style.display = "none";
+        //                document.getElementById('soundBoard').style.display = "none";
+          //              document.getElementById('soundBoardCompact2').style.display = "none";
+                        document.getElementById('soundBoardContainer').insertBefore(document.getElementById('soundBoard2'), document.getElementById('soundBoardContainer').firstChild);
+document.getElementById('soundBoardContainer').firstElementChild.style.display = "flex";
+                        document.getElementById('red').setAttribute("href","CSS/stylesheet-ocean.css");
+                    }
+                    else{
+      //                  document.getElementById('soundBoardCompact').style.display = "none";
+        //                document.getElementById('soundBoard').style.display = "none";
+          //              document.getElementById('soundBoard2').style.display = "none";
+            //            document.getElementById('soundBoardCompact2').style.visibility = "visible";
+                        document.getElementById('soundBoardContainer').insertBefore(document.getElementById('soundBoardCompact2'), document.getElementById('soundBoardContainer').firstChild);
+                 document.getElementById('soundBoardContainer').firstElementChild.style.display = "inline";
+                        document.getElementById('red').setAttribute("href","stylesheet-compact.css");
+
+                    }
+                       // config = outerConfig.soundBoard1;
+                      
+                }
+                
+            }
+        </script>
+	</body>
+</html>

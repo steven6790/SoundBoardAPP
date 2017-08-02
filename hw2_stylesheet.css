@@ -1,0 +1,47 @@
+#title{
+    text-align: center;
+    font-size: 50px;
+}
+
+#login{
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+}
+
+body{
+    background-color: darkolivegreen
+}
+
+#soundBoard{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2Flionking.jpg?alt=media&token=beadd57a-8bee-4a34-bdc6-eafbbdcd70ea");
+    justify-content: space-around;
+    max-width: 1400px;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+}
+
+.item{
+    border-radius: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 6% 6% 6% 6%;
+    min-height: 130px;
+    min-width: 110px;
+    width: 10%;
+    height: 15%;
+    background-color: sandybrown;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    
+}

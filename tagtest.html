@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Tag Test
+        </title> 
+        <meta name="Tag Testing" content="HTML">
+        <noscript>
+            <style>
+                footer {background-color: darkmagenta}
+            </style>
+        </noscript>
+
+    </head> 
+	<body> 
+        <header>
+            <link rel="stylesheet" type="text/css" href="style_edit.css">
+            <nav>
+                <a href="https://website-8bbe4.firebaseapp.com/"> CRSP Front Page</a>
+            </nav>
+	   </header> 
+        <picture>
+            <img alt="birds gif" src="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2Ffunny-birds.gif?alt=media&token=0ea2e228-65c1-486d-9b0e-37dec5ec7ffe">
+        </picture>
+        <br>
+        <br>
+        <br>             
+        <b><u>Animal Soundboard</u></b> <br>
+       <dl>
+           <dt>Monkey</dt>
+                <dd>Chatterring monkeys</dd>
+           <dt>Gorilla</dt>
+                <dd>Angry gorilla</dd>
+           <dt>Hawk</dt>
+                <dd>Screeching hawk</dd>
+        </dl> 
+
+
+        <form>
+            <fieldset>
+                <Legend> Tell us what you think!</Legend>
+                Name: <input type="text"> 
+                Password: <input type="text"><br>
+                
+<!--Date not supported in all browsers: Mozilla-->
+                Date: <input type="date"> <br>
+                
+                Age:  <input type="number"> <br>
+                Are you a bird? <input type="checkbox"> 
+                Did you like it?
+                <select>
+                    <optgroup label="Right Answer">
+                        <option value="yes"> yes   </option>
+                    </optgroup>
+                    <optgroup label="Wrong Answer">
+                        <option value="no">no</option>
+                    </optgroup>
+                </select> <br>
+                <del>Suggestions</del><ins> Garbage</ins> <br>
+                <textarea rows="3" cols="50">Comment here.
+                </textarea> <br>
+                
+                Gender: <br>
+                <input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+                <input type="radio" name="gender"> Other <br>
+                <button id="birdcall" onclick="return birdcall()">Submit Feedback</button>
+                <button type="reset" onclick="return birdcall()">Reset</button>       
+            </fieldset>
+        </form>
+        <br>
+        
+        <b>Food List</b>
+        <ul>
+            <li>Burgers</li>
+            <li>Pizza</li>
+            <li>Chicken</li>
+        </ul> <br>  
+        
+        <br>
+        <br>
+        <br>
+        
+        <iframe src="https://cse134b-22ea9.firebaseapp.com/soundboard-part1a.html"></iframe>
+
+
+        <object width="600" height="800" data="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2FIMG_20170623_092224.jpg?alt=media&token=7f13029a-dc35-4606-88e2-299f4a5da79a"></object>
+        <picture>
+            <img alt="spongebob meme" src="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2Fspongebob_mocking.png?alt=media&token=cdcad3ba-11c1-473c-bab4-911ae00dda91">
+        </picture>
+
+        
+        <script>
+            function birdcall {
+                document.getElementById("geese").play();
+            }
+        </script>
+     
+        <section>
+            <h1>This is a poem about birds</h1>
+            <p>Birds are cool.<br>
+               Birds can fly.<br>
+               Not penguins though. <br>
+               Birds lay eggs. <br>
+               I like green eggs and ham. <br>
+            </p>
+        </section>
+        
+        
+        <main>
+            <picture>
+<!--ERROR: This image cannot be seen in Edge and Mozilla-->
+            <img height="200" width="200" alt="sunrise pic" src="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2Ftropical-sunrise.webp?alt=media&token=45f4c1bf-7385-4b09-8d45-c5321287ff75" srcset="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2Ftropical-sunrise.webp?alt=media&token=45f4c1bf-7385-4b09-8d45-c5321287ff75">
+            </picture>
+        </main>
+        
+        <footer>
+            <picture>
+            <img alt = "spongebob replacement" src="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2Fspongebob_mocking.png?alt=media&token=cdcad3ba-11c1-473c-bab4-911ae00dda91" srcset="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2Fangry_meme.svg?alt=media&token=6a70e985-5bc1-41e8-bf21-51e00f461bf5">  
+            </picture>
+
+<!--ERROR: Web Broswer Compatability for audio in Mozilla Firefox and Internet Explorer(EDGE) did not work-->
+            <object id="geese" data="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Animal%20Sounds%2FGeese%20animals116.wav?alt=media&token=dbe950e9-6e58-4c65-9296-8b04d87aa6c9">
+                <param  name="autoplay" value="true">
+            </object>
+            <h2>Team Members</h2><br>
+            <ol>
+                <li>Steven Partida</li>
+                <li>Christopher Ramos</li>
+            </ol>
+            <table>
+                <tr>
+                    <td> A Product of CRSP Industries &copy; 2017</td>
+                </tr>
+            </table>
+        </footer>
+	</body>
+</html>
