@@ -1,0 +1,84 @@
+@import url 
+
+#title{
+    text-align: center;
+    font-size: 50px;
+    font-style: oblique;
+}
+
+#soundBoard{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("https://website-8bbe4.firebaseapp.com/Images/jungle.jpg");
+    justify-content: space-around;
+    border-radius: 20px;
+    max-width: 1400px;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+}
+#soundBoardCompact{
+    display: none;
+}
+#soundBoard2{
+    display: none;
+    flex-wrap: wrap;
+    background-image: url("https://website-8bbe4.firebaseapp.com/Images/ocean.jpg");
+    justify-content: space-around;
+    border-radius: 20px;
+    max-width: 1400px;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+}
+#soundBoardCompact2{
+    display: none;
+}
+#soundBoardContainer{ 
+    display:flex;
+    flex-direction: column-reverse;
+}
+
+body{
+    background-color: darkolivegreen;
+}
+
+#soundBoard > .item{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 6% 6% 6% 6%;
+    min-height: 140px;
+    min-width: 140px;
+    width: 10%;
+    height: 15%;
+    background-color: sandybrown;
+    font-weight: bold;
+
+}
+
+
+#soundBoard2 > .item{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 6% 6% 6% 6%;
+    min-height: 140px;
+    min-width: 140px;
+    width: 10%;
+    height: 15%;
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    
+}
