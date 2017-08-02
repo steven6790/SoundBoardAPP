@@ -1,0 +1,8 @@
+{
+"soundBoard1": { "title": "Jungle SoundBoard", "name": ["Angry Elephant", "Amazon Macaw", "Cougar", "Happy Elephant", "Geese", "Gorilla", "Hawk", "Lion", "Monkey", "Pig", "Rhinoceros", "Rooster"], "sndURL":["Sounds/angry-elephant.wav", "Sounds/macaw.wav", "Sounds/cougar.wav", "Sounds/happy-elephant.wav", "Sounds/geese.wav", "Sounds/gorilla.wav", "Sounds/hawk.wav", "Sounds/lion.wav", "Sounds/monkey.wav", "Sounds/pig.wav", "Sounds/rhino.wav", "Sounds/rooster.wav"], "imgURL":["Images/angry-elephant.jpg", "Images/macaw.jpg", "Images/cougar.jpg", "Images/happy-elephant.jpg", "Images/geese.jpg", "Images/gorilla.jpg", "Images/hawk.jpg", "Images/lion.jpg", "Images/monkey.jpg", "Images/pig.jpg", "Images/rhino.jpg", "Images/rooster.jpg"]},
+
+"soundBoard2":{"title": "Ocean SoundBoard","name":["Baby Seal", "Beluga", "Bottlenose Dolphin", "Dolphin Click", "Harbor Seal", "Humpback Whale", "Killer Whale", "Penguins", "Seagull", "Sea Lion", "Sea Lion 2", "Underwater Dolphin"], "sndURL":["Sounds/baby-seal.mp3", "Sounds/beluga.mp3", "Sounds/bottlenose.mp3", "Sounds/dolphin-click.mp3", "Sounds/harbor-seal.mp3", "Sounds/humpback-whale.mp3", "Sounds/killer-whale.mp3", "Sounds/penguins.mp3", "Sounds/seagull.mp3", "Sounds/sea-lion.mp3", "Sounds/sea-lion2.mp3", "Sounds/underwater-dolphin.mp3"], "imgURL":["Images/baby-seal.jpg", "Images/beluga.jpg", "Images/bottlenose.jpg", "Images/dolphin-click.jpg", "Images/harbor-seal.jpg", "Images/humpback-whale.jpg", "Images/killer-whale.jpg", "Images/penguins.jpg", "Images/seagull.jpg", "Images/sea-lion.jpg", "Images/sea-lion2.jpg", "Images/underwater-dolphin.jpg"]}
+
+
+
+}

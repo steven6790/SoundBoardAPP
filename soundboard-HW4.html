@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>
+            CRSP Soundboard
+        </title>   
+        
+         <meta charset="utf-8"/> 
+          
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link id="red" href="CSS/stylesheet-HW4.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+        <p id="title"> 
+            
+        </p>
+        <select id="view" onchange="changeView()">
+            <option value="full">Full</option>
+            <option value="compact">Compact</option>
+        </select>
+        <select id="soundBoardChanger" onchange="changeSoundBoard()">
+            <option value="jungle">Jungle</option>
+            <option value="ocean">Ocean</option>
+        </select>
+        <select id="theme" onchange="changeTheme()">
+            <option value="default">Default</option>
+            <option value="purple">Purple</option>
+        </select>
+        <br>
+        <div id="soundBoardContainer">
+            <div id="soundBoard"></div>
+            <div id="soundBoardCompact"></div>
+            <div id="soundBoard2"></div>
+            <div id="soundBoardCompact2"></div>
+        </div>
+        <br>
+        <footer>
+             A Product of CRSP Industries &copy; 2017
+        </footer>
+        <script src="soundBoard.js">        
+        </script>
+	</body>
+</html>

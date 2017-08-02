@@ -1,0 +1,46 @@
+#title{
+    text-align: center;
+    font-size: 50px;
+}
+
+#login{
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+#soundBoard2{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("https://website-8bbe4.firebaseapp.com/Images/ocean.png");
+    justify-content: space-around;
+    border-radius: 20px;
+    max-width: 1400px;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+}
+
+.item{
+    border-radius: 20px;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 6% 6% 6% 6%;
+    min-height: 130px;
+    min-width: 110px;
+    width: 10%;
+    height: 15%;
+    background-color:aquamarine;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    
+}
