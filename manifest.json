@@ -1,0 +1,22 @@
+{
+  "name": "SoundBoard",
+  "short_name": "SB",
+  "icons": [
+      {
+      "src": "Images/eagle.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "Images/eagle-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }, {
+      "src": "Images/eagle-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    } ],
+  "start_url": "/soundboard-HW4.html?utm_source=homescreen",
+  "display": "standalone",
+  "background_color": "#2196F3",
+  "theme_color": "#2196F3"
+}

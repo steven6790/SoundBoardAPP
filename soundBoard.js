@@ -1,7 +1,8 @@
-var config = "";
-var outerConfig = "";
-var myTheme = "red";
-var myView = "full";
+
+var CRSP = {};
+CRSP.config = "";
+CRSP.myTheme = "red";
+CRSP.myView = "full";
 
 function createXHR() {
     try { return new XMLHttpRequest(); } catch (e) {}
@@ -29,8 +30,7 @@ function sendRequest()
 function handleResponse(xhr)
 {
   if (xhr.readyState == 4  && xhr.status == 200) {
-        outerConfig = JSON.parse(xhr.responseText);
-        config =  outerConfig;
+        CRSP.config = JSON.parse(xhr.responseText);
         initializeBoard();
     }
 }
@@ -71,7 +71,7 @@ return str;
 
 function initializeBoard() {
     var stringHtml = "";
-    for(var i=0; i<config.soundBoard1.name.length; i++) {
+    for(var i=0; i<CRSP.config.soundBoard1.name.length; i++) {
         stringHtml += createSoundBoard(config.soundBoard1, i);
     }
      document.getElementById('soundBoard').innerHTML = stringHtml;

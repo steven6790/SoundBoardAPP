@@ -9,6 +9,13 @@
           
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link id="red" href="CSS/stylesheet-HW4.css" type="text/css" rel="stylesheet">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileImage" content="Images/hawk.jpg">
+        <!-- icon in the highest resolution we need it for -->
+<link rel="icon" sizes="192x192" href="Images/eagle-192.png">
+
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+        <meta name="theme-color" content="#2196F3">
 	</head>
 	<body>
         <p id="title"> 
@@ -38,6 +45,19 @@
              A Product of CRSP Industries &copy; 2017
         </footer>
         <script src="soundBoard.js">        
+        </script>
+        <script>
+        if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
         </script>
 	</body>
 </html>
