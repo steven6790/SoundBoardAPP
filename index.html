@@ -117,7 +117,9 @@ border-style: 1;
         </footer>
         <script>
             if('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js').then(function)(){ console.log("Service Worker"); }) 
+                navigator.serviceWorker
+                         .register('/sw.js')
+                         .then(function(){ console.log("Service Worker"); }) 
             }
         </script>
 			
