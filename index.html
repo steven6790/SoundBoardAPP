@@ -7,7 +7,7 @@
 		</title>
         <style>
 	   body {
-           background-image: url("https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2Fnature.jpg?alt=media&token=a4febb55-136d-4b04-b32d-f6176a9a245d");
+           background-image: url("http://localhost:4000/homePics/nature.jpg");
 	       background-size: 1024px 1024px;
 	       background-repeat: no-repeat;
             }
@@ -36,7 +36,7 @@ border-style: 1;
 			</tr>
 			<tr>
 			<td>
-			<img src="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2FStevenPartida.jpg?alt=media&token=ccc78ea5-e902-4f21-9be8-a1714ff9ca0e" alt="Steven" style="width:256px;height:450px;" >
+			<img src="http://localhost:4000/homePics/StevenPartida.jpg" alt="Steven" style="width:256px;height:450px;" >
 				</td>
 			</tr>
 			<tr>
@@ -48,7 +48,7 @@ border-style: 1;
 			</tr>
 			<tr>
 			<td>
-			<img src="https://firebasestorage.googleapis.com/v0/b/cse134b-22ea9.appspot.com/o/Team%20Pictures%2FChrisRamos.jpg?alt=media&token=6981ccca-a520-4fdd-9e92-93109d1ebaf3" alt="Chris" style="width:256px;height:256px;">
+			<img src="http://localhost:4000/homePics/ChrisRamos.jpg" alt="Chris" style="width:256px;height:256px;">
 				
 			</td>
 			</tr>
@@ -118,7 +118,7 @@ border-style: 1;
 			</tr>
 		</table>
         
-<<<<<<< HEAD
+	</head>
         <footer>
             <table>
                 <tr>
@@ -128,20 +128,9 @@ border-style: 1;
         </footer>
         <script>
             if('serviceWorker' in navigator) {
-                navigator.serviceWorker
-                         .register('/sw.js')
-                         .then(function(){ console.log("Service Worker"); }) 
+                navigator.serviceWorker.register('/sw.js').then(function() { console.log("Service Worker"); }) 
             }
         </script>
-=======
-    <footer>
-        <table>
-            <tr>
-                <td> A Product of CRSP Industries &copy; 2017</td>
-            </tr>
-        </table>
-	</footer>
->>>>>>> c3b82c328a6da8fbfd0ffcaaca270baf67547173
 			
 	</body>
 </html>
