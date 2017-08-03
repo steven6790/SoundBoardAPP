@@ -79,6 +79,13 @@ function sendRequest() {
     var xhr = createXHR();
     if (xhr) {
         xhr.open("GET", "https://website-8bbe4.firebaseapp.com/json/packet.txt", true);
+        xhr.onloadend = function () {
+            if (xhr.status === 404) {
+                throw new Error('https://website-8bbe4.firebaseapp.com/json/packet.txt' + ' replied 404 Page Not Found');
+            } else if (xhr.status === 500) {
+                throw new Error('https://website-8bbe4.firebaseapp.com/json/packet.txt' + ' replied 500 Internal Server Error');
+            }
+        };
         xhr.onreadystatechange = function () {handleResponse(xhr); };
         xhr.send(null);
     }
